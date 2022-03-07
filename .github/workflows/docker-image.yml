@@ -26,7 +26,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v3.6.2
       with:
-        images: kristinjeanna/ubuntu
+        images: kristinjeanna/ubuntu-jdk8
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2.9.0
