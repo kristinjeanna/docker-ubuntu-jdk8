@@ -6,7 +6,7 @@ ARG JAVA_SHA256_CHECKSUM=adc13a0a0540d77f0a3481b48f10d61eb203e5ad4914507d489c2de
 # =============================================================================
 # ========== Download JDK
 # =============================================================================
-FROM kristinjeanna/ubuntu:latest AS jdk-downloader
+FROM kristinjeanna/ubuntu:v1.1.0 AS jdk-downloader
 
 USER root
 
@@ -33,7 +33,7 @@ RUN mkdir /opt/${JAVA_EXTRACT_DIR} && \
 # =============================================================================
 # ========== Assemble the final docker image
 # =============================================================================
-FROM kristinjeanna/ubuntu:latest AS final
+FROM kristinjeanna/ubuntu:v1.1.0 AS final
 
 ARG JAVA_VERSION
 ARG JAVA_SYMLINK_NAME
